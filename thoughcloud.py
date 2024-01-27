@@ -5,6 +5,7 @@ from PIL import Image, ImageChops
 from wordcloud import WordCloud
 import cv2
 import time
+import os
 
 # Read text
 subGenre = pd.read_csv(r'goodreads_Data.csv', encoding='ISO-8859-1', usecols=['Sub-Genre'], sep=',')
@@ -83,4 +84,4 @@ print(' ')
 print('Time elapsed: {:.2f}s'.format(time.time() - start_time))
 
 # Save the generated word cloud
-wordcloud.to_file(r'C:\Users\rcarh\Documents\GoodReads\subGenre_wordcloud.png')
+wordcloud.to_file('ImagessubGenre_wordcloud.png')
